@@ -1,5 +1,5 @@
 //
-//  ListModels.swift
+//  DetailModels.swift
 //  DesafioCielo
 //
 //  Created by Gustavo Melki Leal on 19/09/2018.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-enum List {
-  struct Request {
-  }
+enum Detail
+{
+  // MARK: Use cases
   
-  struct Response {
-    var characters: [Character]
+  enum Something
+  {
+    struct Request
+    {
+    }
+    struct Response
+    {
+    }
+    struct ViewModel
+    {
+    }
   }
-  
-  struct ViewModel {
-    var characters: [Character]
-  }
-  
-  struct Error {
-    var errorDescription: String
-  }
-  
 }

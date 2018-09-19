@@ -16,14 +16,15 @@ import SDWebImage
 
 protocol ListDisplayLogic: class {
   func displayCharacters(viewModel: List.ViewModel)
+  func displayError(errorDescription: List.Error)
 }
 
 class ListViewController: UIViewController, ListDisplayLogic {
+  
   var interactor: ListBusinessLogic?
   var router: (NSObjectProtocol & ListRoutingLogic & ListDataPassing)?
 
   // MARK: Object lifecycle
-  
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     setup()
@@ -35,7 +36,6 @@ class ListViewController: UIViewController, ListDisplayLogic {
   }
   
   // MARK: Setup
-  
   private func setup() {
     let viewController = self
     let interactor = ListInteractor()
@@ -50,18 +50,15 @@ class ListViewController: UIViewController, ListDisplayLogic {
   }
   
   // MARK: Routing
-  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    if let vc = segue.destination as? DetailViewController {
+      vc.character = characters[sender as! Int]
+      //print(sender)
+      
     }
   }
   
   // MARK: View lifecycle
-
   @IBOutlet weak var charactersTableView: UITableView!
   var characters = [Character]()
   
@@ -77,9 +74,14 @@ class ListViewController: UIViewController, ListDisplayLogic {
   }
   
   func displayCharacters(viewModel: List.ViewModel) {
-    //print(viewModel)
     characters = viewModel.characters
     self.charactersTableView.reloadData()
+  }
+  
+  func displayError(errorDescription: List.Error) {
+    let alert = UIAlertController(title: "Ops!", message: errorDescription.errorDescription, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    self.present(alert, animated: true)
   }
 }
 
@@ -101,6 +103,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     return cell
   }
   
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 100.0
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.performSegue(withIdentifier: "showDetail", sender: indexPath.row)
+  }
   
 }
 

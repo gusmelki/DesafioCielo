@@ -20,5 +20,4 @@ public struct Character: Codable {
     //case series
   }
   
-  
 }

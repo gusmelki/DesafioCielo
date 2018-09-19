@@ -23,23 +23,21 @@ protocol ListDataStore {
 
 class ListInteractor: ListBusinessLogic, ListDataStore {
   var presenter: ListPresentationLogic?
-  var worker: ListWorker?
   let disposeBag = DisposeBag()
   
   // MARK: Do something
   
   func getCharacters(request: List.Request) {
-    worker = ListWorker()
-    worker?.doSomeWork()
     
     MarvelManager.getCharactersList().subscribe(onNext: { (result) in
-      
       if let result =  result.data?.results {
         let response = List.Response(characters: result)
         self.presenter?.presentCharacters(response: response)
       }
       
     }, onError: { (error) in
+      let error = List.Error(errorDescription: error.localizedDescription)
+      self.presenter?.presentError(errorDescription: error)
       print(error)
     }, onCompleted: {
       print("onCompleted")

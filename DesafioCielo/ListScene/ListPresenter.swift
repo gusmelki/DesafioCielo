@@ -14,15 +14,19 @@ import UIKit
 
 protocol ListPresentationLogic {
   func presentCharacters(response: List.Response)
+  func presentError(errorDescription: List.Error)
 }
 
 class ListPresenter: ListPresentationLogic {
+
   weak var viewController: ListDisplayLogic?
-  
-  // MARK: Do something
   
   func presentCharacters(response: List.Response) {
     let viewModel = List.ViewModel(characters: response.characters)
     viewController?.displayCharacters(viewModel: viewModel)
+  }
+  
+  func presentError(errorDescription: List.Error) {
+    viewController?.displayError(errorDescription: errorDescription)
   }
 }

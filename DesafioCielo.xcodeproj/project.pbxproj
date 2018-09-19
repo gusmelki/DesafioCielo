@@ -12,7 +12,6 @@
 		A4C842872152B220004AA9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C842862152B220004AA9CB /* Assets.xcassets */; };
 		A4C8428A2152B220004AA9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C842882152B220004AA9CB /* LaunchScreen.storyboard */; };
 		A4C842982152CBFD004AA9CB /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842922152CBFD004AA9CB /* ListPresenter.swift */; };
-		A4C842992152CBFD004AA9CB /* ListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842932152CBFD004AA9CB /* ListWorker.swift */; };
 		A4C8429A2152CBFD004AA9CB /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842942152CBFD004AA9CB /* ListRouter.swift */; };
 		A4C8429B2152CBFD004AA9CB /* ListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842952152CBFD004AA9CB /* ListModels.swift */; };
 		A4C8429C2152CBFD004AA9CB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842962152CBFD004AA9CB /* ListViewController.swift */; };
@@ -24,6 +23,12 @@
 		A4C842A92152CEF6004AA9CB /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842A82152CEF6004AA9CB /* Character.swift */; };
 		A4C842AB2152CF02004AA9CB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842AA2152CF02004AA9CB /* Image.swift */; };
 		A4C842AD2152E301004AA9CB /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842AC2152E301004AA9CB /* ListTableViewCell.swift */; };
+		A4C842B52152F443004AA9CB /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842AF2152F443004AA9CB /* DetailPresenter.swift */; };
+		A4C842B62152F443004AA9CB /* DetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842B02152F443004AA9CB /* DetailWorker.swift */; };
+		A4C842B72152F443004AA9CB /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842B12152F443004AA9CB /* DetailRouter.swift */; };
+		A4C842B82152F443004AA9CB /* DetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842B22152F443004AA9CB /* DetailModels.swift */; };
+		A4C842B92152F443004AA9CB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842B32152F443004AA9CB /* DetailViewController.swift */; };
+		A4C842BA2152F443004AA9CB /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C842B42152F443004AA9CB /* DetailInteractor.swift */; };
 		DEA30AFB33D84890F091E482 /* Pods_DesafioCielo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18ED8585642C980C6424657 /* Pods_DesafioCielo.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +42,6 @@
 		A4C842892152B220004AA9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4C8428B2152B220004AA9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4C842922152CBFD004AA9CB /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
-		A4C842932152CBFD004AA9CB /* ListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWorker.swift; sourceTree = "<group>"; };
 		A4C842942152CBFD004AA9CB /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		A4C842952152CBFD004AA9CB /* ListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModels.swift; sourceTree = "<group>"; };
 		A4C842962152CBFD004AA9CB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		A4C842A82152CEF6004AA9CB /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		A4C842AA2152CF02004AA9CB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		A4C842AC2152E301004AA9CB /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		A4C842AF2152F443004AA9CB /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		A4C842B02152F443004AA9CB /* DetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorker.swift; sourceTree = "<group>"; };
+		A4C842B12152F443004AA9CB /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		A4C842B22152F443004AA9CB /* DetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModels.swift; sourceTree = "<group>"; };
+		A4C842B32152F443004AA9CB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A4C842B42152F443004AA9CB /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		F18ED8585642C980C6424657 /* Pods_DesafioCielo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioCielo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				A4C842912152CBD2004AA9CB /* ListScene */,
+				A4C842AE2152F424004AA9CB /* DetailScene */,
 				A4C842A32152CE04004AA9CB /* Models */,
 				A4C8429E2152CD5C004AA9CB /* Service */,
 				A4C8427F2152B21D004AA9CB /* AppDelegate.swift */,
@@ -121,7 +132,6 @@
 				A4C842972152CBFD004AA9CB /* ListInteractor.swift */,
 				A4C842922152CBFD004AA9CB /* ListPresenter.swift */,
 				A4C842952152CBFD004AA9CB /* ListModels.swift */,
-				A4C842932152CBFD004AA9CB /* ListWorker.swift */,
 				A4C842942152CBFD004AA9CB /* ListRouter.swift */,
 				A4C842AC2152E301004AA9CB /* ListTableViewCell.swift */,
 			);
@@ -146,6 +156,19 @@
 				A4C842AA2152CF02004AA9CB /* Image.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A4C842AE2152F424004AA9CB /* DetailScene */ = {
+			isa = PBXGroup;
+			children = (
+				A4C842B32152F443004AA9CB /* DetailViewController.swift */,
+				A4C842B42152F443004AA9CB /* DetailInteractor.swift */,
+				A4C842AF2152F443004AA9CB /* DetailPresenter.swift */,
+				A4C842B22152F443004AA9CB /* DetailModels.swift */,
+				A4C842B02152F443004AA9CB /* DetailWorker.swift */,
+				A4C842B12152F443004AA9CB /* DetailRouter.swift */,
+			);
+			path = DetailScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,13 +293,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4C842992152CBFD004AA9CB /* ListWorker.swift in Sources */,
 				A4C842A52152CED9004AA9CB /* CharactersDataWrapper.swift in Sources */,
+				A4C842B72152F443004AA9CB /* DetailRouter.swift in Sources */,
 				A4C842982152CBFD004AA9CB /* ListPresenter.swift in Sources */,
 				A4C842A92152CEF6004AA9CB /* Character.swift in Sources */,
 				A4C842A72152CEE8004AA9CB /* CharactersDataContainer.swift in Sources */,
+				A4C842B62152F443004AA9CB /* DetailWorker.swift in Sources */,
 				A4C8429B2152CBFD004AA9CB /* ListModels.swift in Sources */,
+				A4C842BA2152F443004AA9CB /* DetailInteractor.swift in Sources */,
+				A4C842B52152F443004AA9CB /* DetailPresenter.swift in Sources */,
 				A4C842AB2152CF02004AA9CB /* Image.swift in Sources */,
+				A4C842B92152F443004AA9CB /* DetailViewController.swift in Sources */,
+				A4C842B82152F443004AA9CB /* DetailModels.swift in Sources */,
 				A4C842AD2152E301004AA9CB /* ListTableViewCell.swift in Sources */,
 				A4C842A22152CDA8004AA9CB /* MarvelManager.swift in Sources */,
 				A4C8429A2152CBFD004AA9CB /* ListRouter.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ListWorker.swift
+//  DetailWorker.swift
 //  DesafioCielo
 //
 //  Created by Gustavo Melki Leal on 19/09/2018.
@@ -12,7 +12,7 @@
 
 import UIKit
 
-class ListWorker
+class DetailWorker
 {
   func doSomeWork()
   {
