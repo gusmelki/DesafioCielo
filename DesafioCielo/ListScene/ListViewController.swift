@@ -22,7 +22,6 @@ protocol ListDisplayLogic: class {
 class ListViewController: UIViewController, ListDisplayLogic {
   
   var interactor: ListBusinessLogic?
-  var router: (NSObjectProtocol & ListRoutingLogic & ListDataPassing)?
 
   // MARK: Object lifecycle
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -40,13 +39,9 @@ class ListViewController: UIViewController, ListDisplayLogic {
     let viewController = self
     let interactor = ListInteractor()
     let presenter = ListPresenter()
-    let router = ListRouter()
     viewController.interactor = interactor
-    viewController.router = router
     interactor.presenter = presenter
     presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
   }
   
   // MARK: Routing
